@@ -1,12 +1,97 @@
-# React + Vite
+# 🎵 Spotify Clone - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ⚠️ **NOTE:**  
+**This is just the frontend, working on backend will submit it in next week.**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🌐 [Click here to visit the deployed site](https://anmolverma06.github.io/Spotify-Clone-frontend/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📸 Screenshots
+
+| Home Page | Album View | Song Playing |
+|-----------|------------|--------------|
+| ![Home](https://i.imgur.com/DemoImage1.png) | ![Album](https://i.imgur.com/DemoImage2.png) | ![Playing](https://i.imgur.com/DemoImage3.png) |
+
+*(Replace these with your actual screenshots as needed)*
+
+---
+
+## ✨ Features
+
+- 🎧 Dynamic song listing with album artwork
+- ▶️ Play/Pause with seek bar and time updates
+- 📱 Responsive design for different screen sizes
+- 🎨 Smooth transitions and clean UI inspired by Spotify
+- 🔁 Context API-based audio player management
+
+---
+
+## 🛠️ Tech Stack
+
+- **React JS**
+- **React Router DOM**
+- **Tailwind CSS**
+- **JavaScript (ES6+)**
+- **HTML/CSS**
+
+---
+
+## 📁 Project Structure
+
+```bash
+spotify-clone-frontend/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── AlbumItem.jsx
+│   │   ├── SongItem.jsx
+│   ├── context/
+│   │   └── PlayerContext.jsx
+│   ├── App.jsx
+│   ├── index.js
+├── package.json
+└── tailwind.config.js
+```
+
+---
+
+## 💻 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/AnmolVerma06/Spotify-Clone-frontend.git
+cd Spotify-Clone-frontend
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the app locally
+
+```bash
+npm run dev
+```
+
+---
+
+## 📬 Contact
+
+Created by [Anmol Verma](https://github.com/AnmolVerma06)  
+For suggestions or collaboration, feel free to open an issue or connect!
+
+---
+
+## ⭐️ Show Your Support
+
+If you like this project, please consider giving it a ⭐️ on GitHub to support the work!
