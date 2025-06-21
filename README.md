@@ -11,16 +11,6 @@
 
 ---
 
-## 📸 Screenshots
-
-| Home Page | Album View | Song Playing |
-|-----------|------------|--------------|
-| ![Home](https://i.imgur.com/DemoImage1.png) | ![Album](https://i.imgur.com/DemoImage2.png) | ![Playing](https://i.imgur.com/DemoImage3.png) |
-
-*(Replace these with your actual screenshots as needed)*
-
----
-
 ## ✨ Features
 
 - 🎧 Dynamic song listing with album artwork
