@@ -8,7 +8,7 @@ import GenreItem from './GenreItem'
 import pkceChallenge from 'pkce-challenge'
 
 const clientId = 'a4de3f164e524c4f9625b5c6e500ed99';
-const redirectUri = window.location.origin + '/#/callback';
+const redirectUri = 'https://anmolverma06.github.io/Spotify-Clone-frontend/callback';
 const scopes = [
   'user-read-private',
   'user-read-email',

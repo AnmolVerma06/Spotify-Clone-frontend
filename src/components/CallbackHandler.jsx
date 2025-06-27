@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 const clientId = 'a4de3f164e524c4f9625b5c6e500ed99';
-const redirectUri = window.location.origin + '/#/callback';
+const redirectUri = 'https://anmolverma06.github.io/Spotify-Clone-frontend/callback';
 
 const CallbackHandler = () => {
   useEffect(() => {
