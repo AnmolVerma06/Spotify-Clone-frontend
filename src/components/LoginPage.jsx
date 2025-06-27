@@ -1,59 +1,36 @@
 import React from 'react';
-import pkceChallenge from 'pkce-challenge';
 
-const clientId = 'a4de3f164e524c4f9625b5c6e500ed99';
-const redirectUri = 'https://anmolverma06.github.io/Spotify-Clone-frontend/#/callback';
-const scopes = [
+const CLIENT_ID = 'a4de3f164e524c4f9625b5c6e500ed99';
+const REDIRECT_URI = window.location.origin + '/callback';
+const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
+const RESPONSE_TYPE = 'token';
+const SCOPES = [
   'user-read-private',
   'user-read-email',
   'playlist-read-private',
   'playlist-read-collaborative',
-  'user-library-read',
-  'user-top-read',
-  'user-read-recently-played',
-  'user-follow-read'
-].join(' ');
+];
 
-function loginWithSpotify() {
-  const { code_verifier, code_challenge } = pkceChallenge();
-  localStorage.setItem('pkce_code_verifier', code_verifier);
-  const params = new URLSearchParams({
-    client_id: clientId,
-    response_type: 'code',
-    redirect_uri: redirectUri,
-    code_challenge_method: 'S256',
-    code_challenge,
-    scope: scopes,
-  });
-  window.location = `https://accounts.spotify.com/authorize?${params.toString()}`;
-}
+const LoginPage = () => {
+  const handleLogin = () => {
+    const authUrl = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(
+      REDIRECT_URI
+    )}&response_type=${RESPONSE_TYPE}&scope=${SCOPES.join('%20')}`;
+    window.location = authUrl;
+  };
 
-const LoginPage = () => (
-  <div style={{
-    background: '#1ed760',
-    minHeight: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }}>
-    <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png" alt="Spotify" style={{ width: 250, marginBottom: 40 }} />
-    <button
-      onClick={loginWithSpotify}
-      style={{
-        background: 'black',
-        color: 'white',
-        border: 'none',
-        borderRadius: 30,
-        padding: '16px 40px',
-        fontSize: 20,
-        fontWeight: 600,
-        cursor: 'pointer'
-      }}
-    >
-      Connect Spotify
-    </button>
-  </div>
-);
+  return (
+    <div className="flex flex-col items-center justify-center h-screen bg-[#121212] text-white">
+      <img src="/spotify_logo.png" alt="Spotify Logo" className="w-32 mb-8" />
+      <h1 className="text-3xl font-bold mb-4">Sign in to Spotify</h1>
+      <button
+        onClick={handleLogin}
+        className="bg-green-500 text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-green-400 transition"
+      >
+        Login with Spotify
+      </button>
+    </div>
+  );
+};
 
 export default LoginPage; 
