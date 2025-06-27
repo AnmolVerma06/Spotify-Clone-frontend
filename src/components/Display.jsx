@@ -5,6 +5,7 @@ import DisplayAlbum from './DisplayAlbum';
 import { albumsData, genresData } from '../assets/assets';
 import DisplayGenre from './DisplayGenre';
 import DisplaySearch from './DisplaySearch';
+import CallbackHandler from './CallbackHandler';
 
 const Display = () => {
 
@@ -45,6 +46,7 @@ const Display = () => {
             <Route path='/album/:id' element={<DisplayAlbum/>}></Route>
             <Route path='/genre/:id' element={<DisplayGenre/>}></Route>
             <Route path='/search' element={<DisplaySearch />} />
+            <Route path='/callback' element={<CallbackHandler />} />
         </Routes>   
     </div>
   )
