@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 const clientId = 'a4de3f164e524c4f9625b5c6e500ed99';
-const redirectUri = 'https://anmolverma06.github.io/Spotify-Clone-frontend/callback';
+const redirectUri = 'https://anmolverma06.github.io/Spotify-Clone-frontend/#/callback';
 
 const CallbackHandler = () => {
   useEffect(() => {
@@ -27,7 +27,10 @@ const CallbackHandler = () => {
         .then((data) => {
           if (data.access_token) {
             localStorage.setItem('spotify_access_token', data.access_token);
-            window.location.replace('/');
+            // Redirect to home (DisplayHome)
+            window.location.hash = '#/';
+          } else {
+            alert('Failed to get access token');
           }
         });
     }
