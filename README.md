@@ -1,7 +1,4 @@
-# 🎵 Spotify Clone - Frontend
-
-## ⚠️ **NOTE:**  
-**This is just the frontend, working on backend will submit it in next week.**
+# 🎵 Spotify Clone 
 
 ---
 
